@@ -21,7 +21,7 @@ public class ValidationControllerTests {
 
 	@Test
 	public void validateSuccess() throws Exception {
-		this.mockMvc.perform(get("/validate?number=10&date=2029-07-04"))
+		this.mockMvc.perform(get("/validate?number=10&date=2023-01-29"))
 				.andExpect(content().string("No errors"))
 				.andDo(print());
 	}
