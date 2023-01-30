@@ -27,13 +27,12 @@ public class ValidationController {
     //BindingResult 는 검증오류가 발생할 경우 오류내용을 보관하는 스프링프레임워크에서 제공하는 객체이다.
     @GetMapping("/validate")
     public String validate(@Valid JavaBean bean, BindingResult result) {
-        System.out.println("bean = " + bean);
+        System.out.println(result);
 
         if (result.hasErrors()) {
             return "Object has validation errors";
         } else {
             return "No errors";
         }
-
     }
 }
