@@ -28,6 +28,7 @@ public class JavaBean {
     //@Future
     //이 어노테이션이 달린 요소는 현재보다 미래의 순간,날짜 또는 시간이어야한다.
     //'현재'는 Validator 또는 ValidatorFactory에 첨부된 ClockProvider에 의해 결정된다.
+    //마찬가지로 message속성에 에러메세지를 작성할 수 있는데, 작성을 따로 안 해줄 경우 default message[must be a future date]로 정해진다.
     @NotNull
     @Future
     @DateTimeFormat(iso = ISO.DATE)
